@@ -10,4 +10,8 @@
     width:6.25vw;
     height:6.25vh;
     flex:1 0 auto;
+    transition: all 0.5s;
+}
+.hovering {
+    background-color:aqua;
 }
