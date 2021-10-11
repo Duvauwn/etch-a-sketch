@@ -7,3 +7,7 @@ The aim of this project is to build a browser version of something between a ske
 # 16x16 grid
 
 The first part of this project is to make a 16x16 grid of square divs. The divs have to be made using JavaScript.
+
+# Hovering
+
+the second part of this project is to make a hover effect so that the grid divs change color when the mouse passes over them,leaving a trail through the grid like a pen would.
