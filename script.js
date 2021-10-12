@@ -4,41 +4,40 @@ const btn = document.querySelector('#btn');
 const clear = document.querySelector('#clear');
 
 let answer;
-answer = 6.25;
-for (let i = 0; i <= 255; i++) {
-    const content = document.createElement('div');
-    content.classList.add('content');
-    content.style.border = '1px solid black';
-    content.style.width = answer + 'vw';
-    content.style.height = answer + 'vh';
-    container.appendChild(content);
+answer = 16;
 
-    content.addEventListener('mouseover', () => {
-        content.classList.add('hovering');
-    });
-    clear.addEventListener('click', () => {
-        container.removeChild(content);
-    })
+function rand() {
+    let random = Math.floor(Math.random() * 256);
+    return random;
 }
-//You need to start merging the stuff below to the stuff above. That'll fix all your problems with removing divs each click.
+
 function newDiv() {
-    for (let j = 0; j < (answer * answer); j++) {
+    for (let i = 0; i < (answer * answer); i++) {
         if (answer > 100) {
             return;
         }
-        const newContent = document.createElement('div');
-        newContent.classList.add('content');
-        newContent.style.border = '1px solid black';
-        newContent.style.width = (100 / answer) + 'vw';
-        newContent.style.height = (100 / answer) + 'vh';
-        container.appendChild(newContent);
+        const content = document.createElement('div');
+        content.classList.add('content');
+        content.setAttribute('id', i);
+        content.style.border = '1px solid black';
+        content.style.width = (100 / answer) + 'vw';
+        content.style.height = (100 / answer) + 'vh';
+        container.appendChild(content);
 
-        newContent.addEventListener('mouseover', () => {
-            newContent.classList.add('hovering');
+        content.addEventListener('mouseover', () => {
+            content.classList.add('hovering');
+            document.getElementById(i).style.backgroundColor = 'rgb(' + rand() + ', ' + rand() + ', ' + rand() + ')';
+            console.log(rand());
+
         });
+        clear.addEventListener('click', () => {
+            container.removeChild(content);
+        })
+
     }
 }
 
+newDiv()
 function user() {
     answer = prompt('How many now bud?')
     return answer;

@@ -16,3 +16,7 @@ the second part of this project is to make a hover effect so that the grid divs 
 
 The third and final part of this project is to add a button to the page. When clicked the button should delete te 16x16 grid and prompt the user for another grid size. When the user inputs their answer it should then generate a grid of that size but it should also take up the same amount of space as the old grid.
 This is the hardest part as it includes a lot of reworking of old code.
+
+# Extra
+
+Now for the fun part. I want to have the color of the hovering state change each time the mouse hovers over the block.It should change every time the mouse enters the div.
