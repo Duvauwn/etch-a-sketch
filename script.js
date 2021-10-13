@@ -19,9 +19,8 @@ function newDiv() {
         const content = document.createElement('div');
         content.classList.add('content');
         content.setAttribute('id', i);
-        content.style.border = '1px solid black';
-        content.style.width = (100 / answer) + 'vw';
-        content.style.height = (100 / answer) + 'vh';
+        content.style.width = (500 / answer) + 'px';
+        content.style.height = (500 / answer) + 'px';
         container.appendChild(content);
 
         content.addEventListener('mouseover', () => {
